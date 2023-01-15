@@ -1,0 +1,53 @@
+solver_options:
+    regularization: 1e-4
+    back_end: "qpoases"
+
+stack:
+    - ["LF", "RF", "LH", "RH"]
+    - ["TRUNK"]
+
+    
+constraints: ["JointLimits", "VelocityLimits"]
+    
+
+
+LF:
+    type: "Cartesian"
+    distal_link: "lf_foot"
+    base_link: "world"
+    lambda: 0.1
+    indices: [0,1,2]
+    
+RF:
+    type: "Cartesian"
+    distal_link: "rf_foot"
+    base_link: "world"
+    lambda: 0.1
+    indices: [0,1,2]
+    
+LH:
+    type: "Cartesian"
+    distal_link: "lh_foot"
+    base_link: "world"
+    lambda: 0.1
+    indices: [0,1,2]
+    
+RH:
+    type: "Cartesian"
+    distal_link: "rh_foot"
+    base_link: "world"
+    lambda: 0.1
+    indices: [0,1,2]
+    
+TRUNK:
+    type: "Cartesian"
+    distal_link: "trunk"
+    base_link: "world"
+    lambda: 0.1
+    
+JointLimits:
+    type: "JointLimits"
+
+
+VelocityLimits:
+    type: "VelocityLimits"
