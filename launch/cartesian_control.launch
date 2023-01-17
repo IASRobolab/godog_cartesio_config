@@ -1,7 +1,7 @@
 <launch>
 
     <param name="robot_description" command="$(find xacro)/xacro '$(find godog_description)/robots/godog.urdf.xacro'" />
-    <param name="robot_description_semantic" textfile="$(find godog_description)/robots/godog.srdf.xacro" /> 
+    <param name="robot_description_semantic" command="$(find xacro)/xacro '$(find godog_description)/robots/godog.srdf.xacro'" /> 
     
     <arg name="stack" default="godog"/>       
     <param name="cartesian/problem_description" textfile="$(find godog_cartesio_config)/stack/$(arg stack).stack"/>
