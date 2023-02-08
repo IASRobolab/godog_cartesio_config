@@ -9,7 +9,6 @@ project(godog_cartesio_config)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cartesian_interface
-  franka_description
 )
 
 ## System dependencies are found with CMake's conventions
